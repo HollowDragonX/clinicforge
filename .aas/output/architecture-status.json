@@ -5,7 +5,7 @@
     "totalFiles": 18
   },
   "metadata": {
-    "analyzedAt": "2026-02-15T01:03:39Z",
+    "analyzedAt": "2026-02-15T01:15:56Z",
     "version": "0.1.0"
   },
   "risk": {
@@ -14,9 +14,9 @@
   },
   "tests": {
     "failed": 0,
-    "passed": 0,
+    "passed": 212,
     "skipped": 0,
-    "total": 0
+    "total": 212
   },
   "violations": {
     "errors": 0,

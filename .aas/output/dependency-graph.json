@@ -514,7 +514,7 @@
     }
   ],
   "metadata": {
-    "analyzedAt": "2026-02-15T01:03:39Z",
+    "analyzedAt": "2026-02-15T01:15:56Z",
     "repositoryRoot": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge",
     "totalEdges": 61,
     "totalFiles": 18,
@@ -644,6 +644,10 @@
         },
         {
           "name": "_TREATMENT_STOPPED",
+          "type": "named"
+        },
+        {
+          "name": "_VITAL_SIGNS_RECORDED",
           "type": "named"
         },
         {

@@ -1,17 +1,19 @@
 """Patient Summary Projection.
 
-A derived view that tracks active conditions and active treatments
-for a patient, rebuilt entirely from events.
+A derived view that tracks active conditions, active treatments,
+and recorded vitals for a patient, rebuilt entirely from events.
 
 Consumes:
 - clinical.judgment.DiagnosisConfirmed
 - clinical.judgment.TreatmentStarted
 - clinical.judgment.TreatmentStopped
+- clinical.observation.VitalSignsRecorded
 
 Produces (state keys):
 - active_conditions: dict[diagnosis_id → {condition, icd_code, patient_id}]
 - active_treatments: dict[treatment_id → {treatment, diagnosis_id, patient_id}]
 - stopped_treatments: dict[treatment_id → {treatment, diagnosis_id, reason, patient_id}]
+- vitals: list[{recorded_at, readings, patient_id, encounter_id}]
 """
 
 from __future__ import annotations
@@ -24,18 +26,23 @@ from clinical_core.domain.events import DomainEvent
 _DIAGNOSIS_CONFIRMED = "clinical.judgment.DiagnosisConfirmed"
 _TREATMENT_STARTED = "clinical.judgment.TreatmentStarted"
 _TREATMENT_STOPPED = "clinical.judgment.TreatmentStopped"
+_VITAL_SIGNS_RECORDED = "clinical.observation.VitalSignsRecorded"
 
 
 class PatientSummaryProjection(ProjectionHandler):
 
     @property
     def subscribed_event_types(self) -> list[str]:
-        return [_DIAGNOSIS_CONFIRMED, _TREATMENT_STARTED, _TREATMENT_STOPPED]
+        return [
+            _DIAGNOSIS_CONFIRMED, _TREATMENT_STARTED, _TREATMENT_STOPPED,
+            _VITAL_SIGNS_RECORDED,
+        ]
 
     def _apply(self, state: dict[str, Any], event: DomainEvent) -> dict[str, Any]:
         active_conditions: dict[str, Any] = dict(state.get("active_conditions", {}))
         active_treatments: dict[str, Any] = dict(state.get("active_treatments", {}))
         stopped_treatments: dict[str, Any] = dict(state.get("stopped_treatments", {}))
+        vitals: list[dict[str, Any]] = list(state.get("vitals", []))
 
         payload = event.payload
 
@@ -65,8 +72,17 @@ class PatientSummaryProjection(ProjectionHandler):
                 stopped_entry.update(active_treatments.pop(treatment_id))
             stopped_treatments[treatment_id] = stopped_entry
 
+        elif event.event_type == _VITAL_SIGNS_RECORDED:
+            vitals.append({
+                "recorded_at": str(event.metadata.occurred_at),
+                "readings": payload.get("readings", {}),
+                "patient_id": payload.get("patient_id"),
+                "encounter_id": payload.get("encounter_id"),
+            })
+
         return {
             "active_conditions": active_conditions,
             "active_treatments": active_treatments,
             "stopped_treatments": stopped_treatments,
+            "vitals": vitals,
         }

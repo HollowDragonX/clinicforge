@@ -1,6 +1,6 @@
 # Domain Summary
 
-**Analyzed at:** 2026-02-15T01:03:39Z
+**Analyzed at:** 2026-02-15T01:15:56Z
 **Repository:** /mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge
 **Total files:** 18
 **Total dependencies:** 61
@@ -16,7 +16,7 @@
 | `src/clinical_core/application/gateway.py` | 7 | 12 |
 | `src/clinical_core/application/projection_handler.py` | 5 | 1 |
 | `src/clinical_core/application/projections/__init__.py` | 0 | 0 |
-| `src/clinical_core/application/projections/patient_summary.py` | 4 | 4 |
+| `src/clinical_core/application/projections/patient_summary.py` | 4 | 5 |
 | `src/clinical_core/application/query_gateway.py` | 3 | 3 |
 | `src/clinical_core/domain/__init__.py` | 0 | 0 |
 | `src/clinical_core/domain/aggregate.py` | 6 | 2 |
