@@ -1,11 +1,11 @@
 {
   "$schema": "aas/architecture-status/v1",
   "graph": {
-    "totalEdges": 46,
-    "totalFiles": 14
+    "totalEdges": 39,
+    "totalFiles": 13
   },
   "metadata": {
-    "analyzedAt": "2026-02-15T00:30:06Z",
+    "analyzedAt": "2026-02-15T00:24:33Z",
     "version": "0.1.0"
   },
   "risk": {

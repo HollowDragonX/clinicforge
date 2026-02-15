@@ -211,66 +211,6 @@
     },
     {
       "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "annotations"
-      ],
-      "target": "__future__"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "Aggregate",
-        "DomainError"
-      ],
-      "target": "clinical_core.domain.aggregate"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "ConnectionStatus",
-        "DomainEvent",
-        "EventMetadata"
-      ],
-      "target": "clinical_core.domain.events"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "dataclass"
-      ],
-      "target": "dataclasses"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "datetime"
-      ],
-      "target": "datetime"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "Any"
-      ],
-      "target": "typing"
-    },
-    {
-      "importType": "static",
-      "source": "src/clinical_core/domain/diagnosis.py",
-      "specifiers": [
-        "UUID",
-        "uuid4"
-      ],
-      "target": "uuid"
-    },
-    {
-      "importType": "static",
       "source": "src/clinical_core/domain/event_store.py",
       "specifiers": [
         "annotations"
@@ -387,10 +327,10 @@
     }
   ],
   "metadata": {
-    "analyzedAt": "2026-02-15T00:30:06Z",
+    "analyzedAt": "2026-02-15T00:24:33Z",
     "repositoryRoot": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge",
-    "totalEdges": 46,
-    "totalFiles": 14,
+    "totalEdges": 39,
+    "totalFiles": 13,
     "version": "0.1.0"
   },
   "nodes": [
@@ -491,28 +431,6 @@
       ],
       "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/domain/aggregate.py",
       "id": "src/clinical_core/domain/aggregate.py"
-    },
-    {
-      "exports": [
-        {
-          "name": "ConfirmDiagnosis",
-          "type": "named"
-        },
-        {
-          "name": "DiagnosisAggregate",
-          "type": "named"
-        },
-        {
-          "name": "DiagnosisCommandHandler",
-          "type": "named"
-        },
-        {
-          "name": "_set_version",
-          "type": "named"
-        }
-      ],
-      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/domain/diagnosis.py",
-      "id": "src/clinical_core/domain/diagnosis.py"
     },
     {
       "exports": [

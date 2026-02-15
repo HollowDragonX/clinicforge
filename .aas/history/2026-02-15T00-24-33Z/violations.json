@@ -1,8 +1,8 @@
 {
   "$schema": "aas/violations/v1",
   "metadata": {
-    "analyzedAt": "2026-02-15T00:30:06Z",
-    "edgesChecked": 46,
+    "analyzedAt": "2026-02-15T00:24:33Z",
+    "edgesChecked": 39,
     "rulesEvaluated": 1,
     "version": "0.1.0"
   },
