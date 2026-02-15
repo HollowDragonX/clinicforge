@@ -1,0 +1,191 @@
+{
+  "$schema": "aas/dependency-graph/v1",
+  "edges": [
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/event_store.py",
+      "specifiers": [
+        "annotations"
+      ],
+      "target": "__future__"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/event_store.py",
+      "specifiers": [
+        "DomainEvent"
+      ],
+      "target": "clinical_core.domain.events"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/event_store.py",
+      "specifiers": [
+        "Protocol"
+      ],
+      "target": "typing"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/event_store.py",
+      "specifiers": [
+        "UUID"
+      ],
+      "target": "uuid"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "annotations"
+      ],
+      "target": "__future__"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "dataclass",
+        "field"
+      ],
+      "target": "dataclasses"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "datetime",
+        "timezone"
+      ],
+      "target": "datetime"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "Enum"
+      ],
+      "target": "enum"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "Any"
+      ],
+      "target": "typing"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/domain/events.py",
+      "specifiers": [
+        "UUID"
+      ],
+      "target": "uuid"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/infrastructure/in_memory_event_store.py",
+      "specifiers": [
+        "annotations"
+      ],
+      "target": "__future__"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/infrastructure/in_memory_event_store.py",
+      "specifiers": [
+        "ConcurrencyError",
+        "DomainEvent"
+      ],
+      "target": "clinical_core.domain.events"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/infrastructure/in_memory_event_store.py",
+      "specifiers": [
+        "datetime",
+        "timezone"
+      ],
+      "target": "datetime"
+    },
+    {
+      "importType": "static",
+      "source": "src/clinical_core/infrastructure/in_memory_event_store.py",
+      "specifiers": [
+        "UUID"
+      ],
+      "target": "uuid"
+    }
+  ],
+  "metadata": {
+    "analyzedAt": "2026-02-15T00:06:56Z",
+    "repositoryRoot": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge",
+    "totalEdges": 14,
+    "totalFiles": 6,
+    "version": "0.1.0"
+  },
+  "nodes": [
+    {
+      "exports": [],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/__init__.py",
+      "id": "src/clinical_core/__init__.py"
+    },
+    {
+      "exports": [],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/domain/__init__.py",
+      "id": "src/clinical_core/domain/__init__.py"
+    },
+    {
+      "exports": [
+        {
+          "name": "EventStore",
+          "type": "named"
+        }
+      ],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/domain/event_store.py",
+      "id": "src/clinical_core/domain/event_store.py"
+    },
+    {
+      "exports": [
+        {
+          "name": "ConnectionStatus",
+          "type": "named"
+        },
+        {
+          "name": "EventValidationError",
+          "type": "named"
+        },
+        {
+          "name": "ConcurrencyError",
+          "type": "named"
+        },
+        {
+          "name": "EventMetadata",
+          "type": "named"
+        },
+        {
+          "name": "DomainEvent",
+          "type": "named"
+        }
+      ],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/domain/events.py",
+      "id": "src/clinical_core/domain/events.py"
+    },
+    {
+      "exports": [],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/infrastructure/__init__.py",
+      "id": "src/clinical_core/infrastructure/__init__.py"
+    },
+    {
+      "exports": [
+        {
+          "name": "InMemoryEventStore",
+          "type": "named"
+        }
+      ],
+      "filePath": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge/src/clinical_core/infrastructure/in_memory_event_store.py",
+      "id": "src/clinical_core/infrastructure/in_memory_event_store.py"
+    }
+  ]
+}

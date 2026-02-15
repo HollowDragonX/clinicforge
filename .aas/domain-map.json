@@ -1,0 +1,9 @@
+{
+  "boundedContexts": [
+    "clinical-core",
+    "identity",
+    "sync",
+    "projections"
+  ],
+  "coreDomain": "clinical-core"
+}

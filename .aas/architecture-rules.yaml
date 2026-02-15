@@ -1,0 +1,16 @@
+architecture:
+  style: clean-architecture
+
+rules:
+  - name: domain-isolation
+    forbid:
+      from: domain
+      to: infrastructure
+
+  - name: event-store-access
+    allow_only:
+      component: clinical-core
+
+  - name: no-business-logic-in-controllers
+    forbid_patterns:
+      - controller_contains_domain_logic

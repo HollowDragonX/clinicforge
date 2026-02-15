@@ -1,0 +1,27 @@
+{
+  "$schema": "aas/architecture-status/v1",
+  "graph": {
+    "totalEdges": 14,
+    "totalFiles": 6
+  },
+  "metadata": {
+    "analyzedAt": "2026-02-15T00:06:56Z",
+    "version": "0.1.0"
+  },
+  "risk": {
+    "level": "low",
+    "score": 0
+  },
+  "tests": {
+    "failed": 0,
+    "passed": 0,
+    "skipped": 0,
+    "total": 0
+  },
+  "violations": {
+    "errors": 0,
+    "info": 0,
+    "total": 0,
+    "warnings": 0
+  }
+}

@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/clinical_core/__init__.py
+src/clinical_core/domain/__init__.py
+src/clinical_core/domain/event_store.py
+src/clinical_core/domain/events.py
+src/clinical_core/infrastructure/__init__.py
+src/clinical_core/infrastructure/in_memory_event_store.py
+src/clinicforge.egg-info/PKG-INFO
+src/clinicforge.egg-info/SOURCES.txt
+src/clinicforge.egg-info/dependency_links.txt
+src/clinicforge.egg-info/requires.txt
+src/clinicforge.egg-info/top_level.txt
+tests/test_event_store_architecture.py
+tests/test_event_store_invariants.py

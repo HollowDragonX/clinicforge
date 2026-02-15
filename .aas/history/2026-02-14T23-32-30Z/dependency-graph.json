@@ -1,0 +1,12 @@
+{
+  "$schema": "aas/dependency-graph/v1",
+  "edges": [],
+  "metadata": {
+    "analyzedAt": "2026-02-14T23:32:30Z",
+    "repositoryRoot": "/mnt/data/home/s4df3mb0y/Developer/repositories/clinicforge",
+    "totalEdges": 0,
+    "totalFiles": 0,
+    "version": "0.1.0"
+  },
+  "nodes": []
+}

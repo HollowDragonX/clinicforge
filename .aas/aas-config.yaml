@@ -1,0 +1,7 @@
+analysis:
+  language: python
+  architecture: clean
+  event_sourced: true
+
+reports:
+  output_dir: ./aas-output
